@@ -22,6 +22,9 @@ public class Employee {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "nic")
+    private String nic;
+
     @Column(name = "email")
     private String email;
 

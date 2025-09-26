@@ -12,6 +12,7 @@ import java.util.Date;
 public class EmployeeDTO {
     private int employeeId;
     private String name;
+    private String nic;
     private String email;
     private String gender;
     private String phone;
