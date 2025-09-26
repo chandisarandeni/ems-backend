@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @NoArgsConstructor
@@ -19,13 +19,13 @@ public class Employee {
     @Column(name = "employee_id")
     private int employeeId;
 
-    @Column(name = "name")
+    @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "nic")
+    @Column(name = "nic", unique = true, nullable = false)
     private String nic;
 
-    @Column(name = "email")
+    @Column(name = "email", unique = true, nullable = false)
     private String email;
 
     @Column(name = "gender")
@@ -41,11 +41,11 @@ public class Employee {
     private float salary;
 
     @Column(name = "hired_date")
-    private Date hiredDate;
+    private LocalDate hiredDate;
 
     @Column(name = "resign_date")
-    private Date resignedDate;
+    private LocalDate resignedDate;
 
     @Column(name = "department")
-    private String departmentId;
+    private String department;
 }

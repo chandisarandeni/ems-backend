@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Data
@@ -18,7 +19,7 @@ public class EmployeeDTO {
     private String phone;
     private String role;
     private float salary;
-    private Date hiredDate;
-    private Date resignedDate;
+    private LocalDate hiredDate;
+    private LocalDate resignedDate;
     private String departmentId;
 }
