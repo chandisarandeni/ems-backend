@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 @NoArgsConstructor
@@ -15,37 +15,36 @@ import java.time.LocalDate;
 public class Employee {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "employee_id")
-    private int employeeId;
+    @Column(name = "employee_id", length = 6)
+    private String employeeId; // EMP001, EMP002, etc.
 
-    @Column(name = "name", nullable = false)
+    @Column(name = "name")
     private String name;
 
-    @Column(name = "nic", unique = true, nullable = false)
+    @Column(name = "nic", unique = true)
     private String nic;
 
-    @Column(name = "email", unique = true, nullable = false)
+    @Column(name = "email")
     private String email;
-
-    @Column(name = "gender")
-    private String gender;
 
     @Column(name = "phone")
     private String phone;
+
+    @Column(name = "gender")
+    private String gender;
 
     @Column(name = "role")
     private String role;
 
     @Column(name = "salary")
-    private float salary;
+    private double salary;
 
     @Column(name = "hired_date")
-    private LocalDate hiredDate;
+    private Date hiredDate;
 
-    @Column(name = "resign_date")
-    private LocalDate resignedDate;
+    @Column(name = "resigned_date")
+    private Date resignedDate;
 
-    @Column(name = "department")
+    @Column(name = "department_id")
     private String departmentId;
 }
