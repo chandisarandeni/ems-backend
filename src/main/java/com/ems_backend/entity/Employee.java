@@ -47,5 +47,5 @@ public class Employee {
     private LocalDate resignedDate;
 
     @Column(name = "department")
-    private String department;
+    private String departmentId;
 }
